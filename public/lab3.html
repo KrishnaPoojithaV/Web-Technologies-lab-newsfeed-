@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="stylelab3.css" type="text/css">
+        <title>News Feed</title>
+        <style>
+            #lnews{
+                font-size: 30px;
+                color: rgb(16, 16, 46);
+                padding-left: 4px;
+                text-align: left;
+                margin-bottom: 5px;
+                text-shadow: 2x 2x 5px black;
+            }
+            #int{
+                font-size: 30px;
+                color: rgb(16, 16, 46);
+                margin-bottom: 5px;
+            }
+            #nat{
+                font-size: 30px;
+                color: rgb(16, 16, 46);
+                margin-bottom: 5px;
+            }
+            #sport{
+                font-size: 30px;
+                color: rgb(16, 16, 46);
+                margin-bottom: 5px; 
+            }
+            #movie{
+                font-size: 30px;
+                color: rgb(16, 16, 46);
+                margin-bottom: 5px;
+            }
+            #buss{
+                font-size: 30px;
+                color: rgb(16, 16, 46);
+                margin-bottom: 5px;
+            }
+            button{
+                margin-left: 50%;
+                margin-top: 15px;
+                margin-bottom: 10px;
+            }
+        </style>
+        <script>
+            function totcharge(){
+                var tcharge=0;
+                var charge= new Array();
+                charge["Weekly"]=20;
+                charge["Monthly"]=150;
+                charge["Yearly"]=750;
+                var val=document.forms["subs"];
+                var subscription=val.elements["subscription"];
+                var discount=Math.floor(Math.random()*10);
+                for(var i=0;i< subscription.length;i++)
+                {
+                    if(subscription[i].checked)
+                    {
+                        tcharge=charge[subscription[i].value];
+                        tcharge=tcharge-discount;
+                        break;
+                    }
+                }
+                document.getElementById('value').innerHTML=tcharge;
+            }
+        </script>
+    </head>
+    <body>
+        <header><img src="emblem.jpg" width="100px" height="100px" style="float: left;" id="logo">INDIA TODAY</header>
+        <div class="na">
+            <nav>
+                <a href="https://www.indiatoday.in/">HOME</a>
+                <a href="https://www.indiatoday.in/world?page=1">WORLD</a>
+                <a href="https://www.indiatoday.in/india">INDIA</a>
+                <a href="https://www.indiatoday.in/sports">SPORTS</a>
+                <a href="https://www.indiatoday.in/business">BUSINESS</a>
+                <a href="https://www.ndtv.com/topic/india-weather">WEATHER</a>
+            </nav>
+        </div><hr>
+        <h3><marquee id="marq">Welcome to today's news bulleten</marquee></h3>
+        <div class="left">
+            <p style="font-size: 30px;text-align: center;background-color: rgb(26, 5, 104);">ADVERTISEMENTS</p><br>
+            <p style="text-align: center;font-size: 20px;">Get your food delivered home..!SWIGGY</p>
+            <iframe width="300" height="160" src="https://www.youtube.com/embed/gRJ3RfVrxDM?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <br>
+            <p style="margin-bottom: 80px;"> </p>
+            <p style="font-size: 20px;text-align: center;">Best insurance policy</p>
+            <figure>
+                <img src="fig17.jpg" width="280px" height="180px" style="padding-left: 10px;">
+                <figcaption style="float: right;">LIC policy</figcaption>
+            </figure>
+            
+        </div>
+        <div class="cont">
+            <p id="lnews"><b>LATEST NEWS</b></p>
+            <hr>
+            <a href="https://www.gadgetsnow.com/tech-news/when-xiaomi-made-fun-of-realme/articleshow/73348348.cms">
+            <h3>When Xiaomi made 'fun of' Realme</h3>
+            <img src="fig2.jpg" width="100px" height="100px" style="float: left;padding-left: 10px;padding-right: 4px;"></a>
+            <p style="padding-left: 10px;margin-left: 10px;margin-bottom: 30px;">
+                Xiaomi has always faced the brunt of critics and consumers  ..
+            </p>
+            <br>
+            <br>
+            <br>
+            <a href="https://timesofindia.indiatimes.com/india/as-virus-stalks-china-india-issues-advisory/articleshow/73342490.cms">
+                <h3>As virus stalks China, India issues advisory</h3>
+                    <img src="fig3.webp" width="100px" height="100px" style="float: left;padding-left: 10px;padding-right: 4px;">
+            </a>
+            <p style="padding-left: 10px;margin-left: 10px;margin-bottom: 30px;">
+                India has issued a travel advisory for those visiting China and stepped up surveillance at airports in the wake of an outbreak of coronavirus in China.
+                Following reports of 41 confirmed cases of novel coronavirus (nCoV), including one death in Wuhan in China this month, health ministry has instructed screening of travellers from the neighbouring country at Delhi, Mumbai and Kolkata airports using thermal scanners.
+            </p>
+            <br>
+            <br>
+            <p id="int"><b>INTERNATIONAL NEWS</b></p>
+            <hr>
+            <a href="https://www.indiatoday.in/world/story/australia-bushfire-stricken-east-welcomes-drenching-rain-1637638-2020-01-17">
+                <h3>Australia's bushfire-stricken east welcomes drenching rain</h3>
+                <img src="fig5.jpg" width="100px" height="100px" style="float: left;padding-left: 10px;padding-right: 4px;">
+            </a>
+            <p style="padding-left: 10px;margin-left: 10px;margin-bottom: 30px;">Victoria, New South Wales and Queensland, three of the most affected states by drought and bushfires welcomed the drenching rain this week, with fire services saying the falls will not extinguish all the blazes, but will aid greatly containment.</p>
+            <br>
+            <a href="https://www.indiatoday.in/india/story/caa-protest-world-students-international-foreign-modi-india-1637241-2020-01-16">
+            <h3>England, Germany, Switzerland: Anti-CAA protests break barriers, shake the world</h3>
+            <img src="fig7.jpg" width="100px" height="100px" style="float: left;padding-left: 10px;padding-right: 4px;">
+            </a>
+            <p style="padding-left: 10px;margin-left: 10px;margin-bottom: 80px;">From Cape Town to Munich to Warsaw, the anti-CAA movement has brought together a sizeable community of young Indians abroad. But what is it that connected them? And why now?</p>
+            <br>
+            <p id="nat"><b>NATIONAL NEWS</b></p>
+            <hr>
+            <a href="https://www.indiatoday.in/india/story/universities-should-not-function-like-assembly-line-production-unit-cji-bobde-1638016-2020-01-18">
+            <h3>Universities should not function like assembly line production unit: CJI Bobde</h3>
+            <img src="fig8.jpg" width="100px" height="100px" style="float: left;padding-left: 10px;padding-right: 4px;">
+            </a>
+            <p style="padding-left: 10px;margin-left: 10px;margin-bottom: 40px;">Chief Justice of India Bobde Sharad Arvind Bobde on Saturday said that universities should not only be about brick and mortar and must not function as an assembly line production unit.</p>
+            <br>
+            <a href="https://www.indiatoday.in/india/story/union-ministers-jammu-and-kashmir-visit-article-370-1637949-2020-01-18">
+            <h3>Union ministers' J&K visit to spread awareness on abrogation of Article 370 begins today</h3>
+            <img src="fig10.jpg" width="100px" height="100px" style="float: left;padding-left: 10px;padding-right: 4px;">
+            </a>
+            <p style="padding-left: 10px;margin-left: 10px;margin-bottom: 80px;">As many as 36 members of the Union Council of Ministers will visit J&K from January 18 to 24 in order to spread words about the government's policies, particularly those taken in the last five months after the abrogation of Article 370.</p>
+            <br>
+            <p id="sport"><b>SPORTS NEWS</b></p>
+            <hr>
+            <a href="https://sports.ndtv.com/india-vs-australia-2019-20/2nd-odi-india-level-series-in-rajkot-with-clinical-performance-against-australia-2165779?pfrom=home-sshowcase">
+            <h3>India vs Australia 2nd ODI: India Level Series In Rajkot With Clinical Performance Against Australia</h3>
+            <img src="fig11.jpg" width="100px" height="100px" style="float: left;padding-left: 10px;padding-right: 4px;">
+            </a>
+            <p style="padding-left: 10px;margin-left: 10px;margin-bottom: 60px;">India beat Australia by 36 runs in the second ODI in Rajkot to draw the three-match series 1-1</p>
+            <br>
+            <a href="https://sports.ndtv.com/tennis/sania-mirza-completes-dream-comeback-wins-hobart-international-title-with-nadiia-kichenok-2165964?pfrom=tenniswidget">
+            <h3>Sania Mirza Completes Dream Comeback, Wins Hobart International Title With Nadiia Kichenok</h3>
+            <img src="fig12.jpg" width="100px" height="100px" style="float: left;padding-left: 10px;padding-right: 4px;">
+            </a>
+            <p style="padding-left: 10px;margin-left: 10px;margin-bottom: 80px;">After a two-year break, Sania Mirza marked her return in style, winning the Hobart International title alongside Nadiia Kichenok</p>
+            <br>
+            <p id="movie"><b>MOVIE NEWS</b></p>
+            <hr>
+            <a href="https://www.empireonline.com/movies/news/oscar-2020-nominees-joker-leads-with-11-nominations/">
+                <h3>Oscar 2020 Nominees: Joker Leads With 11 Nominations</h3>
+                <img src="fig13.jpg" width="100px" height="100px" style="float: left;padding-left: 10px;padding-right: 4px;">
+            </a>
+            <p style="padding-left: 10px;margin-left: 10px;margin-bottom: 10px;">As awards season ramps up, the biggest set of nominations in the business have just been revealed – and leading the Oscars race this year is none other than Joker. Todd Phillips’ reimagining of the classic DC Comics villain received 11 nominations – including Best Film, Directing, Cinematography, Adapted Screenplay, Editing, and a nod for Joaquin Phoenix in Leading Actor.</p>
+            <br>
+            <a href="https://www.empireonline.com/movies/news/avatar-2-new-concept-art/">
+            <h3>Avatar 2: New Concept Art Online From James Cameron's Sequel</h3>
+            <img src="fig14.jpg" width="100px" height="100px" style="float: left;padding-left: 10px;padding-right: 4px;">
+            </a>
+            <p style="padding-left: 10px;margin-left: 10px;margin-bottom: 40px;">We're still a ways away from the arrival of the first Avatar sequel, but James Cameron and his team are making sure we don't all forget that a return trip (more than one, in fact) to Pandora is booked and in the works. Cameron showed up at this year's CES convention, and brought with him some new concept art from the next film, which has now cropped up via the franchise's official Twitter account.</p>
+            <br>
+            <p id="buss"><b>BUSINESS NEWS</b></p>
+            <hr>
+            <a href="https://economictimes.indiatimes.com/news/politics-and-nation/kiran-mazumdar-shaw-conferred-with-australias-highest-civilian-honour/articleshow/73353017.cms">
+            <h3>Kiran Mazumdar-Shaw conferred with Australia's highest civilian honour</h3>
+            <img src="fig15.jpg" width="100px" height="100px" style="float: left;padding-left: 10px;padding-right: 4px;">
+            </a>
+            <p style="padding-left: 10px;margin-left: 10px;margin-bottom: 80px;">Australia's High Commissioner to India Harinder Sidhu invested Mazumdar-Shaw as an Honorary Member within the Order of Australia (AM) in the General Division at a ceremony in Bengaluru on Friday. An alumnus of Federation University Australia, Mazumdar-Shaw is the founder of Biocon â€“ one of India's largest bio-pharmaceutical companies</p>
+            <a href="https://www.businesstoday.in/current/corporate/the-new-golden-goose-of-reliance-industries/story/394085.html">
+            <h3>The new golden goose of Reliance Industries</h3>
+            <img src="fig16.jpg" width="100px" height="100px" style="float: left;padding-left: 10px;padding-right: 4px;">
+            </a>
+            <p style="padding-left: 10px;margin-left: 10px;margin-bottom: 80px;">Reliance Industries Q3 result: In the third quarter, when the petrochemical EBIDTA fell by Rs 2,344 crore, the same from consumer businesses surged by Rs 2,815 crore</p>
+            <br>
+        </div>
+        <div class="right">
+            <p class="rp">Don't have an account??</p>
+            <button onclick="window.location.href='signup3.html';">sign up</button>
+            <p class="rp">Already had an account..</p>
+            <button onclick="window.location.href='login3.html';">login</button>
+            <p class="rmenu">HEADLINES</p>
+            <div id="items">
+            <ul type="none">
+                <li><a href=#int>International</a></li>
+                <li><a href=#nat>National</a></li>
+                <li><a href=#sport>Sports</a></li>
+                <li><a href=#movie>Movies</a></li>
+                <li><a href=#buss>Business</a></li>
+            </ul>
+            </div>
+            <br>
+            <p class="rmenu">SUBSCRIBE HERE</p>
+            <form id="sub" name="subs">
+                <p>Choose subscription type</p>
+                <input type="radio" name="subscription" value="Weekly">Weekly-20rupees<br>
+                <input type="radio" name="subscription" value="Monthly">Monthly-150rupees<br>
+                <input type="radio" name="subscription" value="Yearly">Yearly-750rupees<br>
+                <br>
+                Total Charge with discount included(lucky draw): <p id="value"></p>
+                <button type="button" onclick="totcharge()">Submit</button>
+            </form>
+        </div>
+            <p style="font-size: 20px;color: white;">Stay tuned for further updates....</p>
+    </body>
+</html>

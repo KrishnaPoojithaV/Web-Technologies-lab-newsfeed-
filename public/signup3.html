@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            News Website
+        </title>
+        <link rel='stylesheet' href='style2.css' type='text/css'>
+        <script>
+            function validateform(){
+                var fn=document.forms["sign"]["fname"].value;
+                var uid=document.forms["sign"]["uid"].value;
+                var mail=document.forms["sign"]["mail"].value;
+                if(fn=="" || uid=="" || mail==""){
+                    if(fn==""){
+                        alert("First name not filled");
+                    }
+                    if(uid==""){
+                        alert("Enter user id");
+                    }
+                    if(mail==""){
+                        alert("Email field required");
+                    }
+                    return false;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div style="align:center;" id="log">
+            <form name="sign" action=" " onsubmit="return validateform()" method="post">
+                <h2 style="color: black;font-size: 50px;"><b><mark>Signup</mark></b></h2>
+                <table>
+          <tr>
+           <td>First Name : </td>
+                <td><input type="text" name="fname" placeholder="First Name" style="padding: 5px;border-radius: 5px;"></td>
+           </tr>
+           <tr>
+           <td>Last Name : </td>
+                <td><input type="text" name="lname" placeholder="Last Name" style="padding: 5px;border-radius: 5px;"></td>
+           </tr>
+           <tr>
+           <td>City : </td>
+                <td><input type="text" name="city" placeholder="City Name" style="padding: 5px;border-radius: 5px;"></td>
+           </tr>
+           <tr>
+            <td>Mobile no.:</td>
+                 <td><input type="text" name="mobile" placeholder="mobile" style="padding: 5px;border-radius: 5px;"></td>
+            </tr>
+            <tr>
+                <td>Email :</td>
+                     <td><input type="email" name="mail" placeholder="xyz@gmail.com" style="padding: 5px;border-radius: 5px;"></td>
+            </tr>
+            <tr>
+           <td>User Id : </td>
+                <td><input type="text" name="uid" placeholder="User id" style="padding: 5px;border-radius: 5px;"></td>
+           </tr>
+          <tr>
+         <td>password:</td>
+         <td><input type="password" name="pswd" placeholder="password" style="padding: 5px;border-radius: 5px;" required></td>
+         </tr>
+        </table><br>
+         <input type="submit" name="Submit" style="padding: 5px;border-radius: 5px;">&nbsp;&nbsp;&nbsp;
+         <input type="reset" name="Reset" style="padding: 5px;border-radius: 5px;">
+            </form>  
+        </div>
+    </body>
+</html>
